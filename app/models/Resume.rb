@@ -1,7 +1,7 @@
 class Resume < Prawn::Document
   def initialize(resume_data)
     super()
-    @resume_data = resume_data
+    resume_data = resume_data
     header
     experience
     education
@@ -10,7 +10,7 @@ class Resume < Prawn::Document
   end
 
   def header
-
+    text "header"
   end
 
   def experience
@@ -28,5 +28,4 @@ class Resume < Prawn::Document
   def capstone
 
   end
-  
 end
