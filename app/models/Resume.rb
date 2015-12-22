@@ -14,7 +14,6 @@ class Resume < Prawn::Document
     text "#{@resume_data[:first_name]} #{@resume_data[:last_name]}"
     text "Phone: #{@resume_data[:phone]}"
     text "Email: #{@resume_data[:email]}"
-
   end
 
   def experience
