@@ -10,10 +10,13 @@ class Resume < Prawn::Document
   end
 
   def header
-    font("Helvetica", size: 18, style: :bold_italic)
+    font("Helvetica", size: 18, style: :bold_italic, align: :right)
     text "#{@resume_data[:first_name]} #{@resume_data[:last_name]}"
     text "Phone: #{@resume_data[:phone]}"
     text "Email: #{@resume_data[:email]}"
+    bounding_box([-100, 650], width: 800, height: 2) do
+      stroke_bounds
+    end
   end
 
   def experience
