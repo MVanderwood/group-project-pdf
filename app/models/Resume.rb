@@ -1,13 +1,13 @@
 class Resume < Prawn::Document
 
-  def initialize(resume_data)
+  def initialize(resume_data, options)
     super()
     @resume_data = resume_data
-    header
-    experience
-    education
-    skills
-    capstone
+    header if options["header"]
+    experience if options["experience"]
+    education if options["education"]
+    skills if options["skills"]
+    capstone if options["capstone"]
   end
 
   def header

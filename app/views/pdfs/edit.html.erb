@@ -1,0 +1,11 @@
+<%= form_tag "/resumes/#{@student.id}", method: :patch do %>
+  <%= label_tag :header %>
+  <%= check_box_tag :header %>
+  <%= label_tag :experience %>
+  <%= check_box_tag :experience %>
+  <%= label_tag :education %>
+  <%= check_box_tag :education %>
+  <%= button_tag "Submit" %>
+
+<% end %>
+
