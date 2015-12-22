@@ -1,4 +1,5 @@
 class Resume < Prawn::Document
+
   def initialize(resume_data)
     super()
     @resume_data = resume_data
